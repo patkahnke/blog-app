@@ -1,0 +1,27 @@
+<!-- I need to import Polymer on my element
+to being able to create a polymer element -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- this dom module tag is what encapsulates my element
+identifying my element by the `id` attribute-->
+<dom-module id="author-info">
+  <!-- here I'm going to define what is my element going
+  to render when I use it -->
+  <template>
+    <footer>
+      <h3>Author</h3>
+      <strong>
+        <a href="http://onlythepixel.com" rel="author">Alberto Fernandez</a>
+      </strong>
+      <p>Frontend web developer based in Spain, passionate about technology.</p>
+    </footer>
+  </template>
+
+  <!-- then I need to tell Polymer that a new element
+  has arrived to the city -->
+  <script>
+    Polymer({
+      is: 'author-info'
+    })
+  </script>
+</dom-module>

@@ -1,0 +1,27 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/marked-element/marked-element.html">
+<link rel="import" href="elements/author-info.html">
+
+<dom-module id="my-post-view">
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 16px;
+      }
+    </style>
+
+    <h1>New view</h1>
+    <marked-element markdown="`Polymer` is **awesome**!">
+      <div class="markdown-html"></div>
+    </marked-element>
+    <author-info></author-info>
+  </template>
+  <!-- Creates the element's prototype and registers it -->
+  <script>
+    Polymer({
+      is: 'my-post-view'
+    })
+  </script>
+</dom-module>
